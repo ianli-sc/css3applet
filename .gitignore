@@ -6,6 +6,10 @@ lib-cov
 *.out
 *.pid
 *.gz
+.DS_Store
+.project
+.settings 
+node_modules
 
 pids
 logs
