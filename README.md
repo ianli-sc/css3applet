@@ -12,10 +12,13 @@
 
 ## What are they?
 * input
-  * radio //TODO demo
-  * input //TODO demo
-  * checkbox //TODO demo
-* select //TODO demo
+  * radio
+  * input
+      * we did not set `appearance: none` to `<input>`.
+      * Set attribute of `pattern="[0-9]*"` for Mobile browser to show number input only
+  * checkbox
+* select
+  * we need use add a container with class `mb-select-container` out of `<select>` for show the triangle of the right. see: `<span class="mb-select-container"><select class="mb-select""></select></span>`
 
 ## About:
 * v1.0.0
