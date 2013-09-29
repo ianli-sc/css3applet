@@ -1,0 +1,63 @@
+html, body, h1 {
+    margin: 10;
+    padding: 0;
+    border: none;
+    overflow-x: hidden;
+    font: normal 14px/1.5 '宋体',Arial;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-user-select: none;
+}
+
+html, body {
+    background-color: #F1F1F1;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+    outline: none;
+    -webkit-transition-duration: .3s
+}
+
+dl, dt, dd {
+    margin: 0;
+}
+
+.showdd {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: box;
+}
+
+.showdd input,
+.showdd .mb-select-container,
+.showdd a {
+    margin: 0 10px;
+}
+
+.mb-list-ete {
+    background-color: #FFF;
+    margin-right: 10px;
+}
+
+.mb-input, .mb-select, .mb-select-container {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: box !important;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    box-flex: 1;
+}
+
+img {
+    vertical-align: text-bottom;
+}
+
+dd {
+    padding: 5px 10px;
+}
+
+ul {
+    padding-left: 10px;
+}
