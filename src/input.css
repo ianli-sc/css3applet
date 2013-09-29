@@ -1,8 +1,15 @@
 /*checkbox*/
+/*hack appearance of IE10*/
+.mb-checkbox::-ms-expand,.mb-radio::-ms-expand,.mb-select::-ms-expand,.mb-btn::-ms-expand
+    {
+    display: none;
+}
+
 .mb-checkbox,.mb-radio,.mb-select {
     position: relative;
     -webkit-appearance: none;
-    appearance: none; margin : 0;
+    appearance: none;
+    margin: 0;
     border: 1px solid #B4B4B4;
     width: 20px;
     height: 20px;
@@ -21,11 +28,20 @@
     margin: 0;
 }
 
-.mb-checkbox:disabled,.mb-radio:disabled,.mb-input:disabled {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#AEBCBF), color-stop(50%,#CACACA), color-stop(51%,#BEBEBE), color-stop(100%,#CACACA));
-    background: -webkit-linear-gradient(top, #AEBCBF 0%,#CACACA 50%,#BEBEBE 51%,#CACACA 100%);
-    background: -ms-linear-gradient(top, #AEBCBF 0%,#CACACA 50%,#BEBEBE 51%,#CACACA 100%);
-    background: linear-gradient(to bottom, #AEBCBF 0%,#CACACA 50%,#BEBEBE 51%,#CACACA 100%);
+.mb-checkbox:disabled,
+.mb-radio:disabled,
+.mb-btn:disabled {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #AEBCBF),
+        color-stop(50%, #CACACA), color-stop(51%, #BEBEBE),
+        color-stop(100%, #CACACA));
+    background: -webkit-linear-gradient(top, #AEBCBF 0%, #CACACA 50%, #BEBEBE 51%,
+        #CACACA 100%);
+    background: -ms-linear-gradient(top, #AEBCBF 0%, #CACACA 50%, #BEBEBE 51%, #CACACA
+        100%);
+    background: linear-gradient(to bottom, #AEBCBF 0%, #CACACA 50%, #BEBEBE 51%, #CACACA
+        100%);
+    cursor: not-allowed;
+    color: #707070;
 }
 
 .mb-checkbox:checked:after {
@@ -90,6 +106,16 @@
     border-color: #B7DEDE;
 }
 
+.mb-input:disabled {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e8e8),
+        color-stop(50%,#e0e0e0), color-stop(100%,#dddddd));
+    background: -webkit-linear-gradient(top,  #e8e8e8 0%,#e0e0e0 50%,#dddddd 100%);
+    background: -ms-linear-gradient(top,  #e8e8e8 0%,#e0e0e0 50%,#dddddd 100%);
+    background: linear-gradient(to bottom,  #e8e8e8 0%,#e0e0e0 50%,#dddddd 100%);
+    border-color: #D3D0D0;
+    cursor: not-allowed;
+}
+
 /*select*/
 .mb-select {
     position: relative;
@@ -105,6 +131,12 @@
     text-indent: 5px;
     height: 26px;
     padding-right: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: box;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    box-flex: 1;
 }
 
 .mb-select-container {
@@ -130,4 +162,43 @@
     height: 6px;
     background-color: transparent;
     -webkit-transform: rotate(225deg);
+}
+
+/*button*/
+.mb-btn {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dd3131),
+        color-stop(50%, #bf1e1e), color-stop(100%, #a91010));
+    background: -webkit-linear-gradient(top, #DD3131 0%, #BF1E1E 50%, #A91010 100%);
+    background: -ms-linear-gradient(top, #DD3131 0%, #BF1E1E 50%, #A91010 100%);
+    background: linear-gradient(to bottom, #DD3131 0%, #BF1E1E 50%, #A91010 100%);
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.mb-btn:disabled {
+    border-color: #B4B4B4;
+}
+
+.mb-btn-xl {
+    min-width: 105px;
+    height: 45px;
+    border: 2px solid #880000;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 36px;
+}
+
+.mb-btn-l {
+    min-width: 86px;
+    height: 36px;
+    border: 1px solid #880000;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 29px;
 }
